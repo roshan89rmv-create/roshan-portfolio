@@ -259,6 +259,8 @@
   .project-card li::before{content:"—"; position:absolute; left:0; color:var(--berry); opacity:.5;}
   .project-card.work{border-top:3px solid var(--berry);}
   .project-card.mph{border-top:3px solid var(--sage);}
+  .project-card.build{border-top:3px solid var(--ink); grid-column:1 / -1;}
+  .project-card.build .p-org{color:var(--ink-soft);}
 
   /* ---- content practice ---- */
   .content-card{
@@ -363,7 +365,7 @@
       </div>
     </section>
 
-    <section id="experience">
+            <section id="experience">
       <div class="eyebrow">Experience</div>
       <h2 class="sec-title">Record</h2>
 
@@ -378,7 +380,30 @@
           </ul>
         </div>
       </div>
-
+      <div class="entry">
+        <div class="date mono">Aug — Nov 2025</div>
+        <div>
+          <h3>Public Health Data Analyst (Volunteer)</h3>
+          <span class="org">WHO STEPS NCD Survey, Nauru · with Prof. Maximilian de Courten</span>
+          <ul>
+            <li>Compiled key findings and survey-comparison data for the executive summary of a WHO STEPS national NCD risk-factor survey report for Nauru, drawing on data tables and analysis across the full report.</li>
+            <li>Built the accompanying trend-comparison spreadsheet, tracking changes in NCD risk factors (diabetes, hypertension, tobacco, alcohol, physical activity, and more) across multiple survey years.</li>
+            <li>Standardised the report's figures and graphs for a consistent, publication-ready appearance ahead of submission to WHO and Nauru's Ministry of Health.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="date mono">Mar — Jun 2025</div>
+        <div>
+          <h3>Health Policy Analyst (Volunteer)</h3>
+          <span class="org">The Climate Centre · Melbourne, Australia</span>
+          <ul>
+            <li>Authored a published research chapter (Varghese, R. M., 2025, <em>The State of Policy Report</em>, pp. 243–251) on population health and heatwave impacts, aligned with WHO frameworks.</li>
+            <li>Compared federal and state health policy documents, producing evidence-based written recommendations.</li>
+            <li>Communicated complex health findings clearly to multidisciplinary, non-specialist stakeholders.</li>
+          </ul>
+        </div>
+      </div>
       <div class="entry">
         <div class="date mono">May 2018 — Jan 2024</div>
         <div>
@@ -394,20 +419,6 @@
           </ul>
         </div>
       </div>
-
-      <div class="entry">
-        <div class="date mono">Mar — Jun 2025</div>
-        <div>
-          <h3>Health Policy Analyst (Volunteer)</h3>
-          <span class="org">The Climate Centre · Melbourne, Australia</span>
-          <ul>
-            <li>Authored a published research chapter (Varghese, R. M., 2025, <em>The State of Policy Report</em>, pp. 243–251) on population health and heatwave impacts, aligned with WHO frameworks.</li>
-            <li>Compared federal and state health policy documents, producing evidence-based written recommendations.</li>
-            <li>Communicated complex health findings clearly to multidisciplinary, non-specialist stakeholders.</li>
-          </ul>
-        </div>
-      </div>
-
       <div class="entry">
         <div class="date mono">Oct 2016 — Jan 2017</div>
         <div>
@@ -418,7 +429,6 @@
           </ul>
         </div>
       </div>
-
       <div class="entry">
         <div class="date mono">May — Oct 2015</div>
         <div>
@@ -437,6 +447,17 @@
       <h2 class="sec-title">Work built inside and outside the job — from customer-facing app adoption to full wellness program design.</h2>
 
       <div class="projects-grid">
+
+        <div class="project-card build">
+          <div class="p-org"><span>Independent Build · Claude + Vercel</span><span>2026</span></div>
+          <h3>Health Tech Funding Tracker</h3>
+          <ul>
+            <li>Built and deployed a live dashboard tracking venture funding rounds in digital health, sourced and refreshed daily.</li>
+            <li>Filterable by round stage, sortable columns, light/dark mode, every entry linked back to its source announcement.</li>
+            <li>Seeded with real H1 2026 market data from Rock Health ($7.4B across 244 deals) alongside individual rounds (Nourish, Midi Health, eMed, and others).</li>
+            <li>Designed and shipped end-to-end using Claude, from layout through deployment — proof of applied AI-tool fluency, not just a claim on a resume.</li>
+          </ul>
+        </div>
 
         <div class="project-card work">
           <div class="p-org"><span>Seib Insurance · Doha, Qatar</span><span>2018–2024</span></div>
@@ -502,7 +523,7 @@
 
       <div class="edu-card">
         <h3>Master of Public Health (Advanced), with Distinction</h3>
-        <span class="org">Torrens University Australia · Feb 2025 – Dec 2026 · GPA 6.16</span>
+        <span class="org">Torrens University Australia · Mar 2024 – Dec 2025 · GPA 6.16</span>
         <p style="color:var(--ink-soft); font-size:14.5px;">Key subjects: Health Promotion, Health Systems &amp; Economics, Health Policy &amp; Advocacy, Epidemiology, Biostatistics (90, HD). Capstone: malaria prevention framework, Lukodi, Uganda, with Bright Future Foundation (Distinction).</p>
         <div class="grades">
           <span class="grade-chip">Biostatistics — 90, HD</span>
