@@ -149,7 +149,9 @@ def head(title, desc, prefix, og_img):
 <meta name="description" content="{e(desc)}">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
-<meta property="og:image" content="{prefix}img/{og_img}">
+<meta property="og:image" content="https://roshanmaryvarghese.vercel.app/img/{og_img}">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{FAVICON}">
 {FONTS}
 <link rel="stylesheet" href="{prefix}site.css">
@@ -270,7 +272,7 @@ def index_page():
     return head("Roshan Mary Varghese | Health tech where care, cover and evidence meet",
                 "Dentist, six years in health insurance claims and account management, MPH with Distinction. "
                 "I build plain-English health tech tools and write up how I made each one.",
-                "", "dubai-health-money-radar.webp") + bar("", [
+                "", "og-card.jpg") + bar("", [
         ("Work", "#work"), ("Journey", "#timeline"), ("Credentials", "#credentials"), ("Contact", "#contact")], over=True) + body
 
 
