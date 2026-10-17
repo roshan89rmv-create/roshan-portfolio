@@ -2,38 +2,43 @@
 <main id="main">
 
 <div class="hero" id="top">
-  <p class="hero-line">Health tech where care, cover and evidence meet</p>
-  <a class="scroll-cue" href="#intro" aria-label="Scroll to the introduction"><svg width="34" height="18" viewBox="0 0 34 18" aria-hidden="true"><path d="M2 2l15 13L32 2" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+  <video class="hero-video" muted loop playsinline preload="none" poster="media/network-wide.jpg" aria-hidden="true"
+         data-wide="media/network-wide.mp4" data-tall="media/network-portrait.mp4" data-tall-poster="media/network-portrait.jpg"></video>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-content">
+    <img class="avatar" src="img/roshan.jpg" alt="Portrait of Roshan Mary Varghese" width="400" height="400">
+    <h1>Roshan Mary Varghese</h1>
+    <p class="tagline">Health tech where care, cover and evidence meet</p>
+    <ul class="socials" aria-label="Contact links">
+      <li><a href="{LINKEDIN}" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.840c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg></a></li>
+      <li><a href="mailto:{EMAIL}" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 5.5h18v13H3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3.5 6l8.5 7 8.5-7"/></svg></a></li>
+      <li><a href="{INSTAGRAM}" target="_blank" rel="noopener" aria-label="Instagram, @nearlyroshan"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a></li>
+    </ul>
+  </div>
+  <a class="scroll-cue" href="#intro" aria-label="Scroll to the introduction"><svg width="30" height="16" viewBox="0 0 30 16" aria-hidden="true"><path d="M2 2l13 11L28 2" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
 </div>
 
-<section id="intro" class="panel">
-  <div class="wrap intro">
-    <figure class="portrait"><img src="img/roshan.jpg" alt="Portrait of Roshan Mary Varghese" width="400" height="400"></figure>
-    <div>
-      <h1>Hi, I'm Roshan.</h1>
-      <p class="pitch">I'm a dentist by training. I spent six years in health insurance claims and account management, and I hold an MPH with Distinction. Now I build plain-English tools that help patients, payers and health teams understand where health money and health data are going, and I write up how I made each one.</p>
-      <p class="creds"><span>BDS, First Class</span><span>MPH, Distinction</span><span>AAPC CPC</span><span>CII Level 3</span></p>
-      <div class="ctas">
-        <a class="btn primary" href="#work">See case files</a>
-        <a class="btn" href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="mailto:{EMAIL}">Email</a>
-      </div>
-      <p class="note">Open to roles worldwide, on site or remote.</p>
+<section id="intro" class="sec">
+  <div class="wrap narrow center">
+    <h2 class="sec-title">Hello!</h2>
+    <p class="lead">I'm a dentist by training. I spent six years in health insurance claims and account management, and I hold an MPH with Distinction. Now I build plain-English tools that help patients, payers and health teams understand where health money and health data are going, and I write up how I made each one.</p>
+    <p class="creds"><span>BDS, First Class</span><span>MPH, Distinction</span><span>AAPC CPC</span><span>CII Level 3</span></p>
+    <div class="ctas">
+      <a class="btn primary" href="#work">See my case files</a>
+      <a class="btn" href="mailto:{EMAIL}">Get in touch</a>
     </div>
+    <p class="note">Open to roles worldwide, on site or remote.</p>
   </div>
 </section>
 
-<section id="work" class="panel">
+<section id="work" class="sec alt">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>Selected work</h2>
-      <p>Tools I've built on my own, next to work from my years in insurance and public health. Each case file covers the problem, what I built, and the product decisions behind it.</p>
-    </div>
-
+    <h2 class="sec-title center">My case files</h2>
+    <p class="sec-sub center">Tools I've built on my own. Each case file covers the problem, what I built, and the product decisions behind it.</p>
     <div class="work-list"><!--WORK-->
     </div>
 
-    <h3 class="sub-head">More from the day job and my MPH</h3>
+    <h3 class="sub-head center">More from the day job and my MPH</h3>
     <div class="compact">
       <div class="card">
         <span class="meta"><span class="type">At SEIB, Doha</span><span>2018–2024</span></span>
@@ -59,59 +64,72 @@
   </div>
 </section>
 
-<section id="timeline" class="panel">
+<section id="timeline" class="sec">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>From chairside to claims to product</h2>
-      <p>Each step taught me something I now use in health tech.</p>
-    </div>
+    <h2 class="sec-title center">From chairside to claims to product</h2>
+    <p class="sec-sub center">Each step taught me something I now use in health tech.</p>
     <ol class="timeline">
       <li class="node">
+        <span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 6.2C10.4 4.6 6.8 3.8 5.4 6.4c-1.3 2.4.2 5 .9 7.2.6 2 .7 6.6 2.3 6.6 1.7 0 1.6-4.6 3.4-4.6s1.7 4.6 3.4 4.6c1.6 0 1.7-4.6 2.3-6.6.7-2.2 2.2-4.8.9-7.2-1.4-2.6-5-1.8-6.6-.2z"/></svg></span>
         <div class="when">2015</div>
-        <h3>Bachelor of Dental Surgery, First Class</h3>
-        <div class="where">Mahatma Gandhi University, Kerala, India</div>
-        <p class="learned"><b>What I bring to health tech</b>Clinical training taught me to take a full history before suggesting a fix, which is how I approach users' problems.</p>
+        <div class="tcard">
+          <h3>Bachelor of Dental Surgery, First Class</h3>
+          <div class="where">Mahatma Gandhi University, Kerala, India</div>
+          <p class="learned"><b>What I bring to health tech</b>Clinical training taught me to take a full history before suggesting a fix, which is how I approach users' problems.</p>
+        </div>
       </li>
       <li class="node">
+        <span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M6 3v6a4 4 0 0 0 8 0V3M10 13v3a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>
         <div class="when">2015</div>
-        <h3>Clinical practice</h3>
-        <div class="where">General dentist, Care Dental Center, India</div>
-        <p class="learned"><b>What I bring to health tech</b>Explaining treatment to anxious patients, and to rural groups in their own language, showed me that plain words decide whether people use care.</p>
+        <div class="tcard">
+          <h3>Clinical practice</h3>
+          <div class="where">General dentist, Care Dental Center, India</div>
+          <p class="learned"><b>What I bring to health tech</b>Explaining treatment to anxious patients, and to rural groups in their own language, showed me that plain words decide whether people use care.</p>
+        </div>
       </li>
       <li class="node">
+        <span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M8.5 12l2.4 2.4 4.6-4.8"/></svg></span>
         <div class="when">2016–2024</div>
-        <h3>Claims and account management</h3>
-        <div class="where">SEIB Insurance and Reinsurance, Doha, Qatar, after ICD-10 coding at Tadawi Medical Center</div>
-        <p class="learned"><b>What I bring to health tech</b>Six years with 30–50 corporate clients showed me how money, rules and data move between payers, providers and patients, and where the experience breaks for each of them.</p>
-        <details>
-          <summary>Show highlights</summary>
-          <ul>
-            <li>Built cost and utilisation reports used for client renewals and pricing.</li>
-            <li>Rolled out the Droobi chronic-disease prevention app to corporate clients.</li>
-            <li>Worked on health insurance for FIFA and Asian Games programmes.</li>
-            <li>Ran health campaigns such as Breast Cancer Awareness Month, with zero compliance breaches in six years.</li>
-          </ul>
-        </details>
+        <div class="tcard">
+          <h3>Claims and account management</h3>
+          <div class="where">SEIB Insurance and Reinsurance, Doha, Qatar, after ICD-10 coding at Tadawi Medical Center</div>
+          <p class="learned"><b>What I bring to health tech</b>Six years with 30–50 corporate clients showed me how money, rules and data move between payers, providers and patients, and where the experience breaks for each of them.</p>
+          <details>
+            <summary>Show highlights</summary>
+            <ul>
+              <li>Built cost and utilisation reports used for client renewals and pricing.</li>
+              <li>Rolled out the Droobi chronic-disease prevention app to corporate clients.</li>
+              <li>Worked on health insurance for FIFA and Asian Games programmes.</li>
+              <li>Ran health campaigns such as Breast Cancer Awareness Month, with zero compliance breaches in six years.</li>
+            </ul>
+          </details>
+        </div>
       </li>
       <li class="node">
+        <span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M2.5 9L12 4.5 21.5 9 12 13.5z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M6.5 11v4.5c1.5 1.6 3.5 2.5 5.5 2.5s4-.9 5.5-2.5V11M21.5 9v5"/></svg></span>
         <div class="when">2024–2026</div>
-        <h3>MPH (Advanced), with Distinction</h3>
-        <div class="where">Torrens University Australia, Melbourne</div>
-        <p class="learned"><b>What I bring to health tech</b>Public health training gave me the tools to judge evidence, design programs and measure whether they actually work.</p>
-        <details>
-          <summary>Show highlights</summary>
-          <ul>
-            <li>Biostatistics: 90, High Distinction. Capstone on malaria prevention in Uganda: Distinction.</li>
-            <li>Compiled findings for the WHO STEPS chronic disease survey report for Nauru.</li>
-            <li>Published a chapter on heatwaves and population health with The Climate Centre.</li>
-          </ul>
-        </details>
+        <div class="tcard">
+          <h3>MPH (Advanced), with Distinction</h3>
+          <div class="where">Torrens University Australia, Melbourne</div>
+          <p class="learned"><b>What I bring to health tech</b>Public health training gave me the tools to judge evidence, design programs and measure whether they actually work.</p>
+          <details>
+            <summary>Show highlights</summary>
+            <ul>
+              <li>Biostatistics: 90, High Distinction. Capstone on malaria prevention in Uganda: Distinction.</li>
+              <li>Compiled findings for the WHO STEPS chronic disease survey report for Nauru.</li>
+              <li>Published a chapter on heatwaves and population health with The Climate Centre.</li>
+            </ul>
+          </details>
+        </div>
       </li>
       <li class="node now">
+        <span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="17" r="2" fill="currentColor"/><circle cx="12" cy="7" r="2" fill="currentColor"/><circle cx="19" cy="14" r="2" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 17L12 7l7 7M5 17l14-3"/></svg></span>
         <div class="when">2026</div>
-        <h3>Health tech projects</h3>
-        <div class="where">Independent, building in public</div>
-        <p class="learned"><b>What I bring to health tech</b>Shipping and maintaining live tools taught me to start small, check every number, and write for the person who will use it.</p>
+        <div class="tcard">
+          <h3>Health tech projects</h3>
+          <div class="where">Independent, building in public</div>
+          <p class="learned"><b>What I bring to health tech</b>Shipping and maintaining live tools taught me to start small, check every number, and write for the person who will use it.</p>
+        </div>
       </li>
     </ol>
 
@@ -128,9 +146,9 @@
   </div>
 </section>
 
-<section id="credentials" class="panel">
+<section id="credentials" class="sec alt">
   <div class="wrap">
-    <div class="sec-head"><h2>Credentials</h2></div>
+    <h2 class="sec-title center">Credentials</h2>
     <div class="cred">
       <div class="card wide">
         <h3>Master of Public Health (Advanced), with Distinction</h3>
@@ -162,35 +180,46 @@
       </div>
     </div>
 
-    <div class="colophon card" style="margin-top:36px">
-      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F1F1EF"/><path d="M15 16l-6 6 6 6M29 16l6 6-6 6M25 12l-6 20" fill="none" stroke="#1E1E1E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div>
-        <h3>About this site</h3>
-        <p>Hand-written HTML and CSS with no framework, so it loads fast on a phone. Each case file is generated from one shared template, which keeps the structure consistent. Hosted on Vercel and deployed from GitHub. Designed and built with Claude.</p>
-      </div>
+    <div class="colophon">
+      <h3>About this site</h3>
+      <p>Hand-written HTML and CSS with no framework, so it loads fast on a phone. Each case file is generated from one shared template. Hosted on Vercel and deployed from GitHub. Designed and built with Claude.</p>
     </div>
   </div>
 </section>
 
 </main>
 
-<section class="contact panel" id="contact">
-  <div class="wrap">
+<section class="contact" id="contact">
+  <div class="wrap narrow center">
     <h2>Let's talk about what you're building.</h2>
     <p class="lead">I'm looking for entry-level product and client engagement roles at health tech companies, insurers and pharma. I've worked in India, Qatar and Australia, and I'm open to relocating or working remotely across time zones. References are available on request.</p>
-    <div class="links">
-      <a class="btn primary" href="mailto:{EMAIL}">{EMAIL}</a>
-      <a class="btn" href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="ctas">
+      <a class="btn primary email" href="mailto:{EMAIL}">{EMAIL}</a>
+      <a class="btn ghost" href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-    <footer class="foot">
-      <span>Roshan Mary Varghese, 2026</span>
-      <span>Hand-built and hosted on Vercel</span>
-    </footer>
   </div>
+  <footer class="foot wrap">
+    <span>Roshan Mary Varghese, 2026</span>
+    <span>Hand-built and hosted on Vercel</span>
+  </footer>
 </section>
 
 <script>
-  // Highlight the section in view in the top bar.
+  // Background video: pick the wide or tall cut for the screen, and respect reduced motion.
+  (function(){
+    const v = document.querySelector('.hero-video');
+    if (!v) return;
+    const tall = matchMedia('(max-aspect-ratio: 4/5)').matches;
+    if (tall) v.poster = v.dataset.tallPoster;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    v.src = tall ? v.dataset.tall : v.dataset.wide;
+    v.play().catch(() => {});
+  })();
+
+  // Darken the top bar once the hero has scrolled away, and highlight the section in view.
+  const bar = document.getElementById('bar');
+  const onScroll = () => bar.classList.toggle('solid', scrollY > innerHeight * 0.6);
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
   const links = [...document.querySelectorAll('.bar nav a')];
   const io = new IntersectionObserver(entries => {
     entries.forEach(en => {
@@ -198,7 +227,7 @@
       links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + en.target.id));
     });
   }, {rootMargin:'-45% 0px -50% 0px'});
-  ['intro','work','timeline','credentials','contact'].forEach(id => io.observe(document.getElementById(id)));
+  ['work','timeline','credentials','contact'].forEach(id => io.observe(document.getElementById(id)));
 </script>
 </body>
 </html>

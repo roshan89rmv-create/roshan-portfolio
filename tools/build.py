@@ -15,6 +15,7 @@ INSTAGRAM = "https://instagram.com/nearlyroshan"
 CASES = [
     {
         "slug": "claim-denial-decoder",
+        "color": "#1F5FBF",
         "title": "Claim Denial Decoder",
         "year": "2026",
         "type": "Side project",
@@ -43,6 +44,7 @@ CASES = [
     },
     {
         "slug": "gulf-chronic-disease-watch",
+        "color": "#0E6E78",
         "title": "Gulf Chronic Disease Watch",
         "year": "2026",
         "type": "Data project",
@@ -71,6 +73,7 @@ CASES = [
     },
     {
         "slug": "dubai-health-money-radar",
+        "color": "#123A73",
         "title": "Dubai Health Money Radar",
         "year": "2026",
         "type": "Live tracker, updated weekly",
@@ -99,6 +102,7 @@ CASES = [
     },
     {
         "slug": "biopharma-deal-radar",
+        "color": "#3A3F99",
         "title": "Biopharma Deal Radar",
         "year": "2026",
         "type": "Live tracker, updated weekly",
@@ -132,8 +136,7 @@ MARK = ('<svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rec
 FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D3B42'/%3E"
            "%3Cpath d='M14 64V34a18 18 0 0 1 36 0v30' fill='%238ED1CB'/%3E%3Ccircle cx='46' cy='18' r='7' fill='%23EFA53A'/%3E%3C/svg%3E")
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400'
-         '&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">')
+         '<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">')
 
 
 def head(title, desc, prefix, og_img):
@@ -157,10 +160,10 @@ def head(title, desc, prefix, og_img):
 
 def bar(prefix, nav, over=False):
     links = "".join(f'<a href="{href}">{e(label)}</a>' for label, href in nav)
-    cls = "bar over" if over else "bar"
+    cls = "bar over" if over else "bar solid"
     return f"""
 <header class="{cls}" id="bar">
-  <a class="signature" href="{prefix}index.html" aria-label="Roshan Mary Varghese, home">Roshan Mary Varghese</a>
+  <a class="brand" href="{prefix}index.html" aria-label="Roshan Mary Varghese, home">Roshan Mary Varghese</a>
   <nav aria-label="Sections">{links}</nav>
 </header>"""
 
@@ -174,7 +177,7 @@ def case_page(i, c):
     return head(f'{c["title"]}: case file | Roshan Mary Varghese', c["impact"], "../", c["img"]).replace("<body>", '<body class="case-page">') + bar("../", [
         ("All work", "../index.html#work"), ("Journey", "../index.html#timeline"), ("Contact", "../index.html#contact")]) + f"""
 <main id="main">
-  <div class="case-head">
+  <div class="case-head" style="--card:{c["color"]}">
     <div class="wrap">
       <div class="crumbs"><a href="../index.html#work">All work</a><span>Case file {n} of {total}</span></div>
       <h1>{e(c["title"])}</h1>
@@ -243,7 +246,7 @@ def case_page(i, c):
 
 def work_card(c):
     return f"""
-      <article class="work card">
+      <article class="work" style="--card:{c["color"]}">
         <a class="thumb" href="case/{c["slug"]}.html" aria-label="Read the {e(c["title"])} case file">
           <img src="img/{c["img"]}" alt="{e(c["img_alt"])}" loading="lazy" width="1600" height="1000">
         </a>
@@ -252,9 +255,9 @@ def work_card(c):
           <h3>{e(c["title"])}</h3>
           <p class="impact">{e(c["impact"])}</p>
           <p class="stack"><b>Built with:</b> {e(c["stack"])}</p>
-          <div class="links">
-            <a class="btn dark" href="case/{c["slug"]}.html">Read the case file</a>
-            <a class="btn" href="{c["live"]}" target="_blank" rel="noopener">Open live</a>
+          <div class="card-links">
+            <a href="case/{c["slug"]}.html">Read the case file</a>
+            <a href="{c["live"]}" target="_blank" rel="noopener">Open live</a>
           </div>
         </div>
       </article>"""
@@ -267,7 +270,7 @@ def index_page():
     return head("Roshan Mary Varghese | Health tech where care, cover and evidence meet",
                 "Dentist, six years in health insurance claims and account management, MPH with Distinction. "
                 "I build plain-English health tech tools and write up how I made each one.",
-                "", "dubai-health-money-radar.webp") + '\n<div class="backdrop" aria-hidden="true"></div>' + bar("", [
+                "", "dubai-health-money-radar.webp") + bar("", [
         ("Work", "#work"), ("Journey", "#timeline"), ("Credentials", "#credentials"), ("Contact", "#contact")], over=True) + body
 
 
