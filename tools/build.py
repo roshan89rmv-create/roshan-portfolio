@@ -265,7 +265,7 @@ def index_page():
     body = (ROOT / "tools" / "index.body.html").read_text()
     body = body.replace("<!--WORK-->", "".join(work_card(c) for c in CASES))
     body = body.replace("{LINKEDIN}", LINKEDIN).replace("{EMAIL}", EMAIL).replace("{INSTAGRAM}", INSTAGRAM)
-    return head("Roshan Mary Varghese | Health tech product and client engagement",
+    return head("Roshan Mary Varghese | Health tech where care, cover and evidence meet",
                 "Dentist, six years in health insurance claims and account management, MPH with Distinction. "
                 "I build plain-English health tech tools and write up how I made each one.",
                 "", "dubai-health-money-radar.webp") + bar("", [
