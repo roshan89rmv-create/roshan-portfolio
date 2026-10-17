@@ -2,31 +2,28 @@
 <main id="main">
 
 <div class="hero" id="top">
-  <div class="wrap">
+  <p class="hero-line">Health tech where care, cover and evidence meet</p>
+  <a class="scroll-cue" href="#intro" aria-label="Scroll to the introduction"><svg width="34" height="18" viewBox="0 0 34 18" aria-hidden="true"><path d="M2 2l15 13L32 2" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+</div>
+
+<section id="intro" class="panel">
+  <div class="wrap intro">
+    <figure class="portrait"><img src="img/roshan.jpg" alt="Portrait of Roshan Mary Varghese" width="400" height="400"></figure>
     <div>
-      <h1>Roshan Mary Varghese</h1>
-      <p class="role">Health tech where care, cover and evidence meet</p>
+      <h1>Hi, I'm Roshan.</h1>
       <p class="pitch">I'm a dentist by training. I spent six years in health insurance claims and account management, and I hold an MPH with Distinction. Now I build plain-English tools that help patients, payers and health teams understand where health money and health data are going, and I write up how I made each one.</p>
-      <ul class="chips" aria-label="Credentials">
-        <li>BDS, First Class</li>
-        <li>MPH, Distinction</li>
-        <li>AAPC CPC</li>
-        <li>CII Level 3</li>
-      </ul>
+      <p class="creds"><span>BDS, First Class</span><span>MPH, Distinction</span><span>AAPC CPC</span><span>CII Level 3</span></p>
       <div class="ctas">
         <a class="btn primary" href="#work">See case files</a>
         <a class="btn" href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="mailto:{EMAIL}">Email</a>
       </div>
+      <p class="note">Open to roles worldwide, on site or remote.</p>
     </div>
-    <figure class="portrait">
-      <div class="frame"><img src="img/roshan.jpg" alt="Portrait of Roshan Mary Varghese" width="400" height="400"></div>
-      <figcaption>Open to roles worldwide, on site or remote</figcaption>
-    </figure>
   </div>
-</div>
+</section>
 
-<section id="work">
+<section id="work" class="panel">
   <div class="wrap">
     <div class="sec-head">
       <h2>Selected work</h2>
@@ -62,7 +59,7 @@
   </div>
 </section>
 
-<section id="timeline" style="background:var(--paper);border-block:1px solid var(--rule)">
+<section id="timeline" class="panel">
   <div class="wrap">
     <div class="sec-head">
       <h2>From chairside to claims to product</h2>
@@ -131,7 +128,7 @@
   </div>
 </section>
 
-<section id="credentials">
+<section id="credentials" class="panel">
   <div class="wrap">
     <div class="sec-head"><h2>Credentials</h2></div>
     <div class="cred">
@@ -166,7 +163,7 @@
     </div>
 
     <div class="colophon card" style="margin-top:36px">
-      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#E2F2F0"/><path d="M15 16l-6 6 6 6M29 16l6 6-6 6M25 12l-6 20" fill="none" stroke="#0D3B42" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F1F1EF"/><path d="M15 16l-6 6 6 6M29 16l6 6-6 6M25 12l-6 20" fill="none" stroke="#1E1E1E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div>
         <h3>About this site</h3>
         <p>Hand-written HTML and CSS with no framework, so it loads fast on a phone. Each case file is generated from one shared template, which keeps the structure consistent. Hosted on Vercel and deployed from GitHub. Designed and built with Claude.</p>
@@ -177,7 +174,7 @@
 
 </main>
 
-<section class="contact" id="contact">
+<section class="contact panel" id="contact">
   <div class="wrap">
     <h2>Let's talk about what you're building.</h2>
     <p class="lead">I'm looking for entry-level product and client engagement roles at health tech companies, insurers and pharma. I've worked in India, Qatar and Australia, and I'm open to relocating or working remotely across time zones. References are available on request.</p>
@@ -201,7 +198,7 @@
       links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + en.target.id));
     });
   }, {rootMargin:'-45% 0px -50% 0px'});
-  ['work','timeline','credentials','contact'].forEach(id => io.observe(document.getElementById(id)));
+  ['intro','work','timeline','credentials','contact'].forEach(id => io.observe(document.getElementById(id)));
 </script>
 </body>
 </html>

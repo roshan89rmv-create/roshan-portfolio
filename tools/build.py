@@ -132,8 +132,8 @@ MARK = ('<svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rec
 FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D3B42'/%3E"
            "%3Cpath d='M14 64V34a18 18 0 0 1 36 0v30' fill='%238ED1CB'/%3E%3Ccircle cx='46' cy='18' r='7' fill='%23EFA53A'/%3E%3C/svg%3E")
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800'
-         '&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">')
+         '<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400'
+         '&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">')
 
 
 def head(title, desc, prefix, og_img):
@@ -155,14 +155,13 @@ def head(title, desc, prefix, og_img):
 <a class="skip" href="#main">Skip to content</a>"""
 
 
-def bar(prefix, nav):
+def bar(prefix, nav, over=False):
     links = "".join(f'<a href="{href}">{e(label)}</a>' for label, href in nav)
+    cls = "bar over" if over else "bar"
     return f"""
-<header class="bar" id="bar">
-  <div class="wrap">
-    <a class="mark" href="{prefix}index.html" aria-label="Roshan Mary Varghese, home">{MARK}<span class="full">Roshan Mary Varghese</span></a>
-    <nav aria-label="Sections">{links}</nav>
-  </div>
+<header class="{cls}" id="bar">
+  <a class="signature" href="{prefix}index.html" aria-label="Roshan Mary Varghese, home">Roshan Mary Varghese</a>
+  <nav aria-label="Sections">{links}</nav>
 </header>"""
 
 
@@ -172,8 +171,8 @@ def case_page(i, c):
     problem = "".join(f"<p>{e(p)}</p>" for p in c["problem"])
     built = "".join(f"<li>{e(b)}</li>" for b in c["built"])
     approach = "".join(f'<li class="card"><b>{e(k)}</b><span>{e(v)}</span></li>' for k, v in c["approach"])
-    return head(f'{c["title"]}: case file | Roshan Mary Varghese', c["impact"], "../", c["img"]) + bar("../", [
-        ("All work", "../index.html#work"), ("Timeline", "../index.html#timeline"), ("Contact", "../index.html#contact")]) + f"""
+    return head(f'{c["title"]}: case file | Roshan Mary Varghese', c["impact"], "../", c["img"]).replace("<body>", '<body class="case-page">') + bar("../", [
+        ("All work", "../index.html#work"), ("Journey", "../index.html#timeline"), ("Contact", "../index.html#contact")]) + f"""
 <main id="main">
   <div class="case-head">
     <div class="wrap">
@@ -268,8 +267,8 @@ def index_page():
     return head("Roshan Mary Varghese | Health tech where care, cover and evidence meet",
                 "Dentist, six years in health insurance claims and account management, MPH with Distinction. "
                 "I build plain-English health tech tools and write up how I made each one.",
-                "", "dubai-health-money-radar.webp") + bar("", [
-        ("Work", "#work"), ("Timeline", "#timeline"), ("Credentials", "#credentials"), ("Contact", "#contact")]) + body
+                "", "dubai-health-money-radar.webp") + '\n<div class="backdrop" aria-hidden="true"></div>' + bar("", [
+        ("Work", "#work"), ("Journey", "#timeline"), ("Credentials", "#credentials"), ("Contact", "#contact")], over=True) + body
 
 
 def main():
